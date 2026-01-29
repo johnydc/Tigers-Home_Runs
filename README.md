@@ -77,9 +77,47 @@ In this project we use the following libraries
 uv add matplotlib numpy pandas scikit-learn tensorflow ipykernel
 ```
 
-4. Run the Notebook!
-
-Open the notebook is VSCode and click kernel on the top right. Select the Python interpreter associated with this directory and run the notebook!
 
 ## Reproducing a Result
 
+### Running the Notebooks
+
+Open the notebook in VSCode and click kernel on the top right. Select the Python interpreter associated with this directory. Also, you will need to change the `folder_path` variable at the top of the notebook
+
+1. Open the `data.ipynb` file and run its contents
+
+**What will Generate:**
+ - Home run distribution figures
+ - Train/Val/Test indices arrays
+
+*note:* the imputation portion of the notebook is computationally expensive, so it will need time to run (~ 5-10 minutes)
+
+2. Open the `model.ipynb` file and run its contents
+
+**What will Generate**
+ - Tables with the model's predictions
+ - A residual plot of the predictions for the Validation Set
+
+### Home Run Distributions
+
+**Home Run Histogram:** run cell `11` from the `data.ipynb` notebook
+**Home Run Boxplot:** run cell `12` from the `data.ipynb` notebook to reproduce the Box Plot. 
+
+*note:* these figures is saved in the `results/figures` folder of the project directory.
+
+### Home Run Predictions
+
+**Validation Set Predictions Table:** run cell `8` from the `model.ipynb` notebook
+**Detroit Tigers Predictions Table:** run cell `10` from the `model.ipynb` notebook
+
+*note:* these tables is saved in the `results/predictions` folder of the project directory
+
+**Validation Set Residuals Plot:** run cell `9` from the `model.ipynb` notebook
+
+*note:* this figure is saved in the `results/figures` folder of the project directory
+
+
+## Troubleshooting
+
+**Python Requirements:** `3.11` or `3.12`
+**Dependency Conflicts:** TensorFlow does work with Python versions 3.9 and 3.10; however, numpy has some conflict dependencies. So keep in mind if you switch Python versions to 3.9 or 3.10 that you will have to use a different version of nummpy

@@ -47,18 +47,18 @@ uv --version
 uv init
 ```
 
-Feel free to remove the `main.py` file created during `uv` init
-
-```bash
-rm main.py
-```
-
 2. Change the Python Requirement
 
 Open `pyproject.toml`
 
 ```bash
 vim pyproject.toml
+```
+
+OR (for windows)
+
+```bash
+edit pyproject.toml
 ```
 
 Set `requires-python` = ">=3.11, <3.13"
